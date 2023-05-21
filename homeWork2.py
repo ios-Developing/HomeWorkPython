@@ -4,7 +4,7 @@
 
 print('\nЗадача 10')
 import random
-ß
+
 arr = [random.randint(0, 1) for _ in range(10)]
 print(arr)
 countA = 0  # орел 1
