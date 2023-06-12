@@ -10,19 +10,31 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да
 # **Вывод:** Парам пам-пам
 
-vowel = 'а'
-count = 0
-poem = str(input('Введите стих: ').split())
-poemCount = {}
-for i in range(len(poem)):
-    if vowel in poem[i]:
-        print(poem[i])
-        count += 1
-        poemCount.values()
-    print(count)
-#yes = (lambda x: if x == x[i] in)
-print(poem)
+def count(poem):
+    count = 0
+    for n in list(poem):
+        if vowel == n:
+            count += 1
+    return count
 
+
+vowel = 'а'
+poem = (input('Введите стих: ').split())
+arrCount = []
+print(poem)
+for i in range(len(poem)):
+     arrCount.append(count(poem[i]))
+
+for i in range(len(arrCount)):
+    result = True if arrCount[0] == arrCount[i] else False
+    if result == False:
+        print('"Пам парам"')
+        break
+if result:
+    print('"Парам пам-пам"')
+
+# print(arrCount)
+# print(result)
 
 # Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6),
 # которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и столбца.
@@ -39,3 +51,11 @@ print(poem)
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+a = 6
+b = 6
+print_operation_table = lambda x, y: x * y
+for y in range(1, a + 1):
+    print(' ')
+    for x in range(1, b + 1):
+        print(print_operation_table(x, y), end=' ')
