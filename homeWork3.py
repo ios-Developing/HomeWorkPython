@@ -8,7 +8,7 @@ for n in range(n):
     a.append(input(f'Enter number {n+1}: '))
 print(n, a)
 x = int(input('Looking for number X. Enter X: '))
-i = 0 # count array
+i = 0  # count array
 countX = 0
 while i < len(a):
     if int(a[i]) == x:

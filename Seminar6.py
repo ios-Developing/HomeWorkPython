@@ -1,15 +1,55 @@
-a = []
-n = int(input('Enter range A: '))
-for i in range(n):
-    a.append(input('Enter A: '))
-b = []
-m = int(input('Enter range B: '))
-for i in range(m):
-    b.append(input('Enter B: '))
-print(a, b)
-for i in range(len(a)):
-    for ii in range(len(b)):
-        if a[i] == b[ii]:
-            print(a[i])
-            break
+# Даны два массива чисел. Требуется вывести те элементы первого массива
+# (в том порядке, в каком они идут в первом массиве), которых нет во втором массиве.
+# Пользователь вводит  число N - количество элементов в первом массиве,
+# затем N чисел - элементы массива. Затем число M - количество элементов во втором массиве.
+# Затем элементы второго массива
 
+# a = []
+# n = int(input('Enter range A: '))
+# for i in range(n):
+#     a.append(input('Enter A: '))
+# b = []
+# m = int(input('Enter range B: '))
+# for i in range(m):
+#     b.append(input('Enter B: '))
+# print(a, b)
+# for i in range(len(a)):
+#     for ii in range(len(b)):
+#         if a[i] == b[ii]:
+#             print(a[i])
+#             break
+
+# Дан массив, состоящий из целых чисел. Напишите программу, которая в данном массиве
+# определит количество элементов, у которых два соседних и, при этом, оба соседних
+# элемента меньше данного. Сначала вводится число N — количество элементов в массиве
+# Далее записаны N чисел — элементы массива. Массив состоит из целых чисел.
+
+# a = []
+# n = int(input('Enter range N: '))
+# for i in range(n):
+#     a.append(input('Enter N: '))
+# print(a, len(a))
+# print(a.index(a), len(a)-2)
+# for i in range(len(a)):
+#     while a.index() < len(a)-2:
+#         if a[i] > a[i+1] and a[i] > a[i+2]:
+#
+#             print(a[i])
+
+# Дан список чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
+# Считается, что любые два элемента, равные друг другу образуют одну пару, которую
+# необходимо посчитать. Вводится список чисел. Все числа списка находятся на разных строках.
+
+arr = list(map(int, input().split()))
+mem = {}
+for elem in arr:
+    if elem not in mem:
+        mem[elem] = 1
+    else:
+        mem[elem] += 1
+
+count = 0
+for elem in mem:
+    if mem[elem] > 1:
+        count+=1
+print('Пар элементов, равных друг другу = ', count)
